@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell Junk Cars Kane County</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+          <img src="images/logo.png" alt="Kane Junk Cars" class="logo" />
+          <div class="phone-number">Call Toll-Free: <strong>1-651-417-6553</strong></div>
+        </div>
+      </nav>
+      
+  <header class="hero">
+    <div class="overlay">
+      <h1>We Buy Junk Cars Kane County</h1>
+      <p>Fast, Free Towing • Same-Day Cash Offers</p>
+      <a href="#form" class="btn-primary">Get Cash Now</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="feature-item">
+      <img src="images/tow-truck.png" alt="Free Towing" />
+      <h3>Free Towing</h3>
+      <p>No hidden fees or pickup charges.</p>
+    </div>
+    <div class="feature-item">
+      <img src="images/cash.png" alt="Cash Offer" />
+      <h3>Fast Cash</h3>
+      <p>Same-day payment on the spot.</p>
+    </div>
+  </section>
+
+  <section id="form" class="form-section">
+    <h2>Get Your Offer</h2>
+    <form id="junkForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="text" name="car" placeholder="Car Make & Model" required />
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sell My Junk Car Kane County. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    document.getElementById('junkForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+  
+      const formData = new FormData(this);
+      const data = {
+        name: formData.get('name'),
+        phone: formData.get('phone'),
+        car: formData.get('car')
+      };
+  
+      try {
+        const response = await fetch('http://localhost:5000/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+  
+        if (response.ok) {
+          alert('Thank you! Your info was submitted.');
+          this.reset();
+        } else {
+          alert('There was an issue. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Network error. Please try again later.');
+      }
+    });
+  </script>
+  
+</body>
+</html>

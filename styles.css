@@ -1,0 +1,68 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; line-height:1.6; color:#333; }
+
+.hero {
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  height:80vh; position:relative;
+}
+.hero .overlay {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.5); display:flex;
+  flex-direction:column; justify-content:center; align-items:center;
+  color:#fff; text-align:center;
+}
+.btn-primary {
+  display:inline-block; padding:12px 24px;
+  background:#3396cb; color:#fff; text-decoration:none;
+  border-radius:4px; margin-top:20px;
+}
+.features {
+  display:flex; justify-content:center; padding:40px 20px;
+  gap:40px; background:#f9f9f9;
+}
+.feature-item { text-align:center; width:200px; }
+.feature-item img { width:80px; margin-bottom:12px; }
+
+.form-section {
+  padding:60px 20px; text-align:center;
+}
+.form-section form {
+  max-width:400px; margin:20px auto;
+  display:flex; flex-direction:column; gap:12px;
+}
+.form-section input {
+  padding:10px; font-size:16px;
+  border:1px solid #ccc; border-radius:4px;
+}
+footer {
+  background:#222; color:#eee; text-align:center;
+  padding:20px 10px;
+}
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    height: 200px;
+    width: auto;
+  }
+  
+  .phone-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #002fff;
+  }
+  
