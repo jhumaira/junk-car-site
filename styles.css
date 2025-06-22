@@ -5,6 +5,29 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#333; }
   background: url('hero-bg.jpg') center/cover no-repeat;
   height:80vh; position:relative;
 }
+.hero-highlights {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: left;
+  font-size: 1rem;
+}
+.hero-highlights ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hero-highlights li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #fff;
+}
+.hero-highlights p {
+  margin: 5px 0;
+}
+
 .hero .overlay {
   position:absolute; top:0; left:0; width:100%; height:100%;
   background:rgba(0,0,0,0.5); display:flex;
@@ -34,6 +57,11 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#333; }
   padding:10px; font-size:16px;
   border:1px solid #ccc; border-radius:4px;
 }
+.form-section p {
+  color: #444;
+  line-height: 1.6;
+}
+
 footer {
   background:#222; color:#eee; text-align:center;
   padding:20px 10px;
@@ -66,3 +94,88 @@ footer {
     color: #002fff;
   }
   
+  .form-section select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-section label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  #offerAmount {
+    font-size: 1.25rem;
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  #vinField {
+    transition: all 0.3s ease-in-out;
+  }
+  /* Responsive Nav */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .phone-number {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero .overlay {
+    position: static;
+    padding: 20px;
+  }
+
+  .hero-highlights {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive Features Section */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .feature-item {
+    width: 90%;
+  }
+}
+
+/* Responsive Form Section */
+@media (max-width: 768px) {
+  .form-section form {
+    padding: 0 10px;
+  }
+
+  .form-section input,
+  .form-section select {
+    width: 100%;
+  }
+}
+
