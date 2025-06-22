@@ -89,7 +89,7 @@ footer {
   }
   
   .phone-number {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #002fff;
   }
@@ -178,4 +178,55 @@ footer {
     width: 100%;
   }
 }
+
+.why-choose {
+  background-color: #f0f8ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-choose h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.why-choose p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.why-list li {
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.call-message {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+.call-to-action {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.call-to-action a {
+  color: #3396cb;
+  text-decoration: none;
+}
+
 
