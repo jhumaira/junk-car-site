@@ -20,7 +20,6 @@
       <p>Fast, Free Towing • Same-Day Cash Offers</p>
       <a href="tel:6514176553" class="btn-primary">Call Now</a>
 
-  
       <div class="hero-highlights">
         <ul>
           <li>✅ <strong>No Title, No Problem!</strong></li>
@@ -32,10 +31,8 @@
           <li>📄 No Title, No Problem.</li>
         </ul>
       </div>
-      
     </div>
   </header>
-  
 
   <section class="features">
     <div class="feature-item">
@@ -56,7 +53,6 @@
       We're here to remove the inconvenience and stress that comes with selling a used car.
       We've helped thousands of people across IL sell their junk cars for cash, and we want to help you too.
     </p>
-    
     <ul class="why-list">
       <li>🚗 Junk Cars</li>
       <li>💵 Top Cash on the Spot</li>
@@ -65,7 +61,6 @@
       <li>⚡ Same Day Pickup and Payment</li>
       <li>➕ And More!</li>
     </ul>
-  
     <p class="call-message">
       <strong>Ready to Get an Offer on Your Vehicle?</strong><br />
       We'll Pick Up Your Junk Car & Pay On The Spot. No Title, No Problem.
@@ -74,33 +69,33 @@
       📞 <a href="tel:6514176553">Call (651) 417-6553</a><br />
       Call us right now to get a free offer!
     </p>
-    <p>*Legal Compliance:  You must be the verified registered owner of the vehicle and shall comply with all applicable federal, state, and local laws and regulations with respect to selling and transferring off the vehicle's ownership.</p>
+    <p>*Legal Compliance: You must be the verified registered owner of the vehicle and shall comply with all applicable federal, state, and local laws and regulations with respect to selling and transferring off the vehicle's ownership.</p>
   </section>
 
   <section id="form" class="form-section">
     <h2>Get Your Offer</h2>
-      <p style="font-size: 1.1rem; margin-top: 10px;">
-        Need to Get Rid Of a Junk Vehicle? <br />
-        <strong>Call For an Immediate Cash Offer:</strong> 
-        <a href="tel:6514176553" style="color: #3396cb; text-decoration: none;">(651) 417-6553</a>
-      </p>
+    <p style="font-size: 1.1rem; margin-top: 10px;">
+      Need to Get Rid Of a Junk Vehicle? <br />
+      <strong>Call For an Immediate Cash Offer:</strong> 
+      <a href="tel:6514176553" style="color: #3396cb; text-decoration: none;">(651) 417-6553</a>
+    </p>
 
-    <form id="junkForm">
+    <form action="https://formsubmit.co/haleemjavaria17@gmail.com" method="POST" autocomplete="off">
       <input type="text" name="name" placeholder="Full Name" required />
       <input type="tel" name="phone" placeholder="Phone Number" required />
       <input type="text" name="year" placeholder="Car Year" required />
       <input type="text" name="make" placeholder="Car Make" required />
       <input type="text" name="model" placeholder="Car Model" required />
-  
+
       <label for="title">Do you have a title?</label>
       <select name="title" id="title" required>
         <option value="">Select</option>
         <option value="yes">Yes</option>
         <option value="no">No</option>
       </select>
-  
+
       <input type="text" name="vin" id="vinField" placeholder="VIN Number (if no title)" style="display:none;" />
-  
+
       <div id="lienContainer" style="display:none;">
         <label for="lien">Is there a lien on the car?</label>
         <select name="lien" id="lien">
@@ -109,124 +104,72 @@
           <option value="yes">Yes</option>
         </select>
       </div>
-  
+
       <p id="lienMessage" style="display:none; color:red;"><strong>We do not work with vehicles with active liens.</strong></p>
       <p><strong>Estimated Offer: <span id="offerAmount">$0</span></strong></p>
-  
+
+      <input type="hidden" name="_next" value="https://kanecountyjunkcars.com/thank-you.html" />
+      <input type="hidden" name="_captcha" value="false">
+
       <button type="submit" class="btn-primary">Submit</button>
     </form>
-  </section>
 
-  
+    <script>
+      const titleField = document.getElementById('title');
+      const vinField = document.getElementById('vinField');
+      const lienContainer = document.getElementById('lienContainer');
+      const lienField = document.getElementById('lien');
+      const lienMessage = document.getElementById('lienMessage');
+      const offerAmount = document.getElementById('offerAmount');
+
+      // Set default offer
+      offerAmount.textContent = '$0';
+
+      titleField.addEventListener('change', function () {
+        lienMessage.style.display = 'none';
+        lienContainer.style.display = 'none';
+        lienField.value = '';
+        offerAmount.textContent = '$0';
+
+        if (this.value === 'yes') {
+          vinField.style.display = 'none';
+          offerAmount.textContent = '$325';
+        } else if (this.value === 'no') {
+          vinField.style.display = 'block';
+          lienContainer.style.display = 'block';
+          offerAmount.textContent = '$200';
+        } else {
+          vinField.style.display = 'none';
+          lienContainer.style.display = 'none';
+        }
+      });
+
+      lienField.addEventListener('change', function () {
+        if (titleField.value === 'no') {
+          if (this.value === 'yes') {
+            lienMessage.style.display = 'block';
+            offerAmount.textContent = '$0';
+          } else {
+            lienMessage.style.display = 'none';
+            offerAmount.textContent = '$200';
+          }
+        }
+      });
+    </script>
+  </section>
 
   <footer>
     <p>&copy; 2025 Sell My Junk Car Kane County. All rights reserved.</p>
     <p>Axcess Dispatch is a marketing and dispatch service that connects vehicle owners with licensed junk car buyers in their area. We are not a car dealership and do not buy or sell vehicles.
 
-      1.	You tell us about your junk car using our form or by calling us.
-      2.	We forward your vehicle information to a trusted, licensed junk car buyer in your area.
-      3.	The buyer contacts you directly to finalize pricing and schedule pickup.
-      4.	You get paid by the licensed buyer, and they handle all paperwork.
-    
-    Note: Axcess Dispatch does not buy, sell, or take ownership of vehicles.
-    
-    Axcess Dispatch provides junk buyers and haulers with live vehicle leads and scheduled pickups. We do not sell vehicles or complete transactions. We simply connect you with real sellers ready to junk their vehicles.
-    
-    Axcess Dispatch is a marketing and dispatch service only. We do not buy, sell, or take legal ownership of any vehicles. All vehicle sales and title transfers are conducted directly between the vehicle owner and the licensed junk car buyer.
-    
-    We act only as a connector between vehicle owners and buyers. Buyers who work with us agree that they are responsible for verifying vehicle details, handling payment to the seller, and ensuring legal compliance with local and state regulations.
-    
-    We are not a licensed dealer or broker and do not represent ourselves as such.</p>
-  </footer>
+    1. You tell us about your junk car using our form or by calling us.  
+    2. We forward your vehicle information to a trusted, licensed junk car buyer in your area.  
+    3. The buyer contacts you directly to finalize pricing and schedule pickup.  
+    4. You get paid by the licensed buyer, and they handle all paperwork.
 
-  <script>
-    const titleField = document.getElementById('title');
-    const vinField = document.getElementById('vinField');
-    const lienContainer = document.getElementById('lienContainer');
-    const lienField = document.getElementById('lien');
-    const lienMessage = document.getElementById('lienMessage');
-    const offerAmount = document.getElementById('offerAmount');
-    const form = document.getElementById('junkForm');
-  
-    titleField.addEventListener('change', function () {
-      lienMessage.style.display = 'none';
-      lienContainer.style.display = 'none';
-      lienField.value = '';
-      offerAmount.textContent = '$0';
-  
-      if (this.value === 'yes') {
-        vinField.style.display = 'none';
-        offerAmount.textContent = '$325';
-      } else if (this.value === 'no') {
-        vinField.style.display = 'block';
-        lienContainer.style.display = 'block';
-      } else {
-        vinField.style.display = 'none';
-      }
-    });
-  
-    lienField.addEventListener('change', function () {
-      if (this.value === 'yes') {
-        lienMessage.style.display = 'block';
-        offerAmount.textContent = '$0';
-      } else if (this.value === 'no') {
-        lienMessage.style.display = 'none';
-        offerAmount.textContent = '$200';
-      } else {
-        lienMessage.style.display = 'none';
-        offerAmount.textContent = '$0';
-      }
-    });
-  
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-  
-      if (titleField.value === 'no' && lienField.value === 'yes') {
-        alert('We do not purchase vehicles with active liens.');
-        return;
-      }
-  
-      const formData = new FormData(this);
-      const data = {
-        name: formData.get('name'),
-        phone: formData.get('phone'),
-        year: formData.get('year'),
-        make: formData.get('make'),
-        model: formData.get('model'),
-        title: formData.get('title'),
-        vin: formData.get('vin'),
-        lien: formData.get('lien'),
-        offer:
-          formData.get('title') === 'yes'
-            ? 325
-            : formData.get('lien') === 'no'
-            ? 200
-            : 0
-      };
-  
-      try {
-        const response = await fetch('http://localhost:5000/send-email', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-  
-        if (response.ok) {
-          alert('Thank you! Your info was submitted.');
-          this.reset();
-          vinField.style.display = 'none';
-          lienContainer.style.display = 'none';
-          lienMessage.style.display = 'none';
-          offerAmount.textContent = '$0';
-        } else {
-          alert('There was an issue. Please try again.');
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        alert('Network error. Please try again later.');
-      }
-    });
-  </script>
-  
+    Note: Axcess Dispatch does not buy, sell, or take ownership of vehicles.  
+    We act only as a connector between vehicle owners and buyers. All vehicle sales and title transfers are conducted directly between the seller and licensed buyer.  
+    </p>
+  </footer>
 </body>
 </html>
