@@ -240,4 +240,22 @@ footer {
   text-decoration: none;
 }
 
+/* Responsive Phone Number Fix */
+@media (max-width: 768px) {
+  .phone-number {
+    font-size: 1.8rem;            /* Slightly larger than before */
+    white-space: nowrap;         /* Prevent wrapping to a new line */
+    overflow: hidden;
+    text-overflow: ellipsis;     /* Optional: trims overflow with "..." if screen too narrow */
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .phone-number a {
+    color: #002fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
 
